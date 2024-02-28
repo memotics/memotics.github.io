@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Video</title>
-  <link rel="stylesheet" crossorigin href="/assets/index-D59hVUTe.css">
-</head>
-<body>
-    <div id="video-container">
-        <video id="main-video" muted>
-            <source src="/assets/360Vid-DcCKZU7w.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_white.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div id="unityContainer">
-        <iframe id="unity-output" src="./unity/index.html" frameborder="0" scrolling="no" allow="autoplay"></iframe>
+    <!--  
+          Google Fonts
+    ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+    
+    <!--  
+          font-family: 'Inter', sans-serif;
+    ---->
+    <title>ThreeJS-Template</title>
+    <script type="module" crossorigin src="/assets/index-3a7e3614.js"></script>
+    <link rel="stylesheet" href="/assets/index-5cd81d05.css">
+  </head>
+  <body>
+    <div id="webglContainer">
+        <canvas class="webgl"></canvas>
+        
     </div>
-
-    <script src="./src/main.js"></script>
-</body>
+    <div id="videoContainer">
+      <video id="main-video" muted>
+          <source src="./video/360Vid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+    </div>
+  </body>
 </html>
