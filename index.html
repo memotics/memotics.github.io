@@ -32,7 +32,7 @@
         }
 
         #canvas {
-            z-index: 9;
+            z-index: -1;
             position: absolute;
             left: 0;
             top: 0;
@@ -188,6 +188,11 @@
                 width: 100%;
             }
 
+        #LogInButton
+        {
+            z-index: 100;
+        }
+
         @keyframes promo-appear-animation {
             0% {
                 transform: scale(2.0);
@@ -206,13 +211,23 @@
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="module" crossorigin src="/assets/index-oTdHXGlQ.js"></script>
+  <script type="module" crossorigin src="/assets/index-aLn0Zsh4.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-zzVdyw_i.css">
 </head>
 <body id="body">
     <div id="loading">
         <p id="loadingText">Loading...</p>
     </div>
+
+    <div id="buttons">
+        <button><h1>Home</h1></button>
+        <button><h1>About</h1></button>
+        <button><h1>Palace</h1></button>
+        <button><h1>MEMO Pass</h1></button>
+        <button><h1>More</h1></button>
+        <button id="LogInButton"><h1>Log In</h1></button>
+    </div>
+
     <canvas id="canvas"></canvas>
 
     <!-- Mother of God, pls forgive me -->
@@ -237,14 +252,7 @@
         </div>
     </div>
 
-    <div id="buttons">
-        <button><h1>Home</h1></button>
-        <button><h1>About</h1></button>
-        <button><h1>Palace</h1></button>
-        <button><h1>MEMO Pass</h1></button>
-        <button><h1>More</h1></button>
-        <button id="LogInButton"><h1>Log In</h1></button>
-    </div>
+    
     <div class="sidebarBG animationClassIdle" id="collinSidebar">
         <div class="sidebar">
             <h1>Collin Seow's Pad</h1>
