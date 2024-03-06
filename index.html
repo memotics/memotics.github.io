@@ -193,6 +193,13 @@
             z-index: 100;
         }
 
+        #VideoBG {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: fixed;
+        }
+
         @keyframes promo-appear-animation {
             0% {
                 transform: scale(2.0);
@@ -211,7 +218,7 @@
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="module" crossorigin src="/assets/index-6Sdm_8bD.js"></script>
+  <script type="module" crossorigin src="/assets/index-FxUQsXmf.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-zzVdyw_i.css">
 </head>
 <body id="body">
@@ -228,8 +235,10 @@
         <button id="LogInButton"><h1>Log In</h1></button>
     </div>
 
+    
     <canvas id="canvas"></canvas>
-
+    <iframe src="./Video/index.html" id="VideoBG" frameborder="0"></iframe>
+    
     <!-- Mother of God, pls forgive me -->
     <div class="promo">
         <div class="promo-middle">
