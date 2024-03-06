@@ -3,13 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Webgl Testing</title>
+    <title>Collin Unity Build</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      #unity-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+  
+      #unity-loading-bar,
+      #unity-warning,
+      #unity-footer {
+        display: none; /* Hide loading bar, warning, and footer */
+      }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=100vw height=100vh tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +35,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Webgl Testing</div>
+        <div id="unity-build-title">Collin Unity Build</div>
       </div>
     </div>
     <script>
@@ -57,14 +72,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Oasis Export.loader.js";
+      var loaderUrl = buildUrl + "/CollinBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Oasis Export.data.unityweb",
-        frameworkUrl: buildUrl + "/Oasis Export.framework.js.unityweb",
-        codeUrl: buildUrl + "/Oasis Export.wasm.unityweb",
+        dataUrl: buildUrl + "/CollinBuild.data.unityweb",
+        frameworkUrl: buildUrl + "/CollinBuild.framework.js.unityweb",
+        codeUrl: buildUrl + "/CollinBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Webgl Testing",
+        companyName: "E-Memotics",
+        productName: "Collin Unity Build",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
