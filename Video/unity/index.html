@@ -3,28 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Collin Unity Build</title>
+    <title>Unity WebGL Player | Colling-Proj-URP</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <style>
-      #unity-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-  
-      #unity-loading-bar,
-      #unity-warning,
-      #unity-footer {
-        display: none; /* Hide loading bar, warning, and footer */
-      }
-    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=100vw height=100vh tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -35,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Collin Unity Build</div>
+        <div id="unity-build-title">Colling-Proj-URP</div>
       </div>
     </div>
     <script>
@@ -72,15 +57,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/CollinBuild.loader.js";
+      var loaderUrl = buildUrl + "/CollinOasisExported.loader.js";
       var config = {
-        dataUrl: buildUrl + "/CollinBuild.data.unityweb",
-        frameworkUrl: buildUrl + "/CollinBuild.framework.js.unityweb",
-        codeUrl: buildUrl + "/CollinBuild.wasm.unityweb",
+        dataUrl: buildUrl + "/CollinOasisExported.data.gz",
+        frameworkUrl: buildUrl + "/CollinOasisExported.framework.js.gz",
+        codeUrl: buildUrl + "/CollinOasisExported.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "E-Memotics",
-        productName: "Collin Unity Build",
-        productVersion: "0.1",
+        companyName: "DefaultCompany",
+        productName: "Colling-Proj-URP",
+        productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
 
