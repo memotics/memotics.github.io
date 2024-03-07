@@ -1,4 +1,4 @@
-import * as THREE from 'three'; 
+import * as THREE from '/node_modules/three'; 
 import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import * as LinearControls from '/Scripts/LinearControls.js';
 

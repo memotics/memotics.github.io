@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from '/node_modules/three';
 
 class FocalControls {
 	constructor(_cam, _scene, startRotation) {
