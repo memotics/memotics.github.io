@@ -1,4 +1,4 @@
-import Ammo from 'Ammo.js-main/builds/Ammo.js';
+import Ammo from '/node_modules/Ammo.js-main/builds/Ammo.js';
 import * as THREE from 'three'; 
 import { Clock } from 'three/src/core/Clock.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
