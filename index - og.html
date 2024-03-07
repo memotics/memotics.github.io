@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memotics</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script type='text/javascript' src='node_modules/three/examples/jsm/AmmoPhysics.js'></script>-->
+    <script type='text/javascript' src='node_modules/three-nebula/build/three-nebula.js'></script>
+
+    <script type="module" src="Scripts/animationTest.js"></script>
+
+
+</head>
+<body id="body">
+    <div id="loading">
+        <p id="loadingText">Loading...</p>
+    </div>
+    <div id="start"></div>
+    <div id="buttons">
+        <button><h1>Home</h1></button>
+        <button><h1>About</h1></button>
+        <button><h1>Palace</h1></button>
+        <button><h1>MEMO Pass</h1></button>
+        <button><h1>More</h1></button>
+        <button><h1>Log In</h1></button>
+    </div>
+    <div class="sidebarBG animationClassIdle" id="collinSidebar">
+        <div class="sidebar">
+            <h1>Collin Seow's Pad</h1>
+            <img class="sidebarImage" src="public/images/systematic-trader.webp" />
+
+            <p>
+                The long-awaited The Systematic Trader Book version 2.0 brings to you all the trading and investing golden nuggets from version 1.0…
+
+                Plus brand new chapters from fellow practitioners, where these principles remain relevant even on Options and Cryptocurrencies.
+
+                Learn the secrets of applying a systematic methodology to dramatically improve your trading process and reap the desired results.
+            </p>
+
+            <button class="sidebarButton" id="PlayButtonCollin"><script type="text/javascript">
+                document.getElementById("PlayButtonCollin").onclick = function () {
+                    location.href = "CollinBuild/index.html";
+    };
+</script></button>
+        </div>
+    </div>
+    <div class="sidebarBG animationClassIdle" id="testSideBar">
+        <div class="sidebar">
+            <h1>TEST RAAAAA</h1>
+            <img class="sidebarImage" src="public/images/him.png" />
+
+            <p>
+                djungelskog hehehehehehhehhehehehe
+            </p>
+
+            <button class="sidebarButton" id="PlayButtonCollin"></button>
+        </div>
+    </div>
+    <div class="sidebarBG animationClassIdle" id="testSideBar2">
+        <div class="sidebar">
+            <h1>E-Memotics</h1>
+            <img class="sidebarImage" src="public/images/homie.webp" />
+
+            <p>
+                We are Memotics, aiming to lead the way in the creation of memories and uncovering emotions in the digital realm - the two most powerful human existential phenomenon that one could experience.
+
+                Our vision at memotics has always been to empower creative minds of future generations to express themselves and break free from traditional learning, co-create the future through the use of web3 technology and non-linear learning.
+            </p>
+
+            <button class="sidebarButton" id="PlayButtonCollin"></button>
+        </div>
+    </div>
+    <div id="buttonHolder">
+        <!--<button id="chinaButton">--><!--<img src="public/images/him.png" id="test"/>--><!--</button>-->
+
+    </div>
+</body>
+</html>

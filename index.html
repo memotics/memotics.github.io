@@ -9,10 +9,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <link rel="apple-touch-icon" href="/assets/logo-V3IFjREJ.png">
-    <link rel="icon" href="/assets/logo-V3IFjREJ.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" href="logo.png">
 
     <title>WebGL Fluid Simulation</title>
+    <link rel="stylesheet" href="style.css">
 
     <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
 
@@ -25,6 +26,7 @@
     <script type="text/javascript" src="dat.gui.min.js"></script>
     <script type='text/javascript' src='node_modules/three-nebula/build/three-nebula.js'></script>
 
+    <script type="module" src="Scripts/physicsTest.js"></script>
     <style>
         @font-face {
             font-family: 'iconfont';
@@ -141,7 +143,7 @@
             font-size: 2.8vmax;
             font-family: Futura, "Trebuchet MS", Arial, sans-serif;
             text-align: center;
-            background-image: url("/assets/promo_back-fisFAXN_.png");
+            background-image: url("promo_back.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -218,8 +220,6 @@
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="module" crossorigin src="/assets/index-9er5q8SH.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-zzVdyw_i.css">
 </head>
 <body id="body">
     <div id="loading">
@@ -254,10 +254,10 @@
                     <p>Try Fluid Simulation app!</p>
                     <div class="links-container">
                         <a class="link" id="apple_link" target="_blank">
-                            <img class="link-img" alt="Download on the App Store" src="/assets/app_badge-He1AdNLe.png" />
+                            <img class="link-img" alt="Download on the App Store" src="app_badge.png" />
                         </a>
                         <a class="link" id="google_link" target="_blank">
-                            <img class="link-img" alt="Get it on Google Play" src="/assets/gp_badge-zn3iYpz7.png" />
+                            <img class="link-img" alt="Get it on Google Play" src="gp_badge.png" />
                         </a>
                     </div>
                 </div>
@@ -269,7 +269,7 @@
     <div class="sidebarBG animationClassIdle" id="collinSidebar">
         <div class="sidebar">
             <h1>Collin Seow's Pad</h1>
-            <img class="sidebarImage" src="/assets/systematic-trader-NynE3yhS.webp" />
+            <img class="sidebarImage" src="public/images/systematic-trader.webp" />
 
             <p>
                 The long-awaited The Systematic Trader Book version 2.0 brings to you all the trading and investing golden nuggets from version 1.0…
@@ -291,7 +291,7 @@
     <div class="sidebarBG animationClassIdle" id="testSideBar">
         <div class="sidebar">
             <h1>TEST RAAAAA</h1>
-            <img class="sidebarImage" src="/assets/him-hZ15LLuk.png" />
+            <img class="sidebarImage" src="public/images/him.png" />
 
             <p>
                 djungelskog hehehehehehhehhehehehe
@@ -303,7 +303,7 @@
     <div class="sidebarBG animationClassIdle" id="testSideBar2">
         <div class="sidebar">
             <h1>E-Memotics</h1>
-            <img class="sidebarImage" src="/assets/homie-0ICo40wu.webp" />
+            <img class="sidebarImage" src="public/images/homie.webp" />
 
             <p>
                 We are Memotics, aiming to lead the way in the creation of memories and uncovering emotions in the digital realm - the two most powerful human existential phenomenon that one could experience.
