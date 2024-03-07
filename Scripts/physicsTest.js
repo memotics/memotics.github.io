@@ -1,11 +1,11 @@
 import Ammo from '/node_modules/Ammo.js-main/builds/Ammo.js';
 import * as THREE from 'three'; 
 import { Clock } from 'three/src/core/Clock.js';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 //import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as FocalControls from '/Scripts/FocalControls.js';
-import { Color, Vector3 } from 'three';
+import { Vector3 } from 'three';
 
 // fetch('/Video/index.html')
 //   .then(response => {
