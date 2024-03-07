@@ -4,7 +4,7 @@ import { Clock } from '/node_modules/three/src/core/Clock.js';
 import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import * as FocalControls from '/Scripts/FocalControls.js';
-import { Color, Vector3 } from 'three';
+import { Color, Vector3 } from '/node_modules/three';
 
 // fetch('/Video/index.html')
 //   .then(response => {
