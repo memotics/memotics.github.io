@@ -1,4 +1,3 @@
 title: Memotics
 description: bazonga
-include:
-	-node_modules
+include: ["node_modules"]
