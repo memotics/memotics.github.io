@@ -27,7 +27,6 @@ const videoTexture = new THREE.VideoTexture( video );
 var RunPhysics = true;
 var HomieHeads = [];
 
-
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.0001, 10000);
 camera.position.set(0, 0, 3);
 camera.lookAt(0, 0, 0);
