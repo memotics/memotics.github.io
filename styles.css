@@ -17,7 +17,7 @@ html {
   overscroll-behavior: contain;
   font-size: max(0.75rem, 0.8101851852vw);
 
-  color: #6e6bcd;
+  color: #ff4d4d;
   background: #ecedef;
 }
 
@@ -45,6 +45,14 @@ body,
   padding-right: max(1.2rem, 40/1440 * 100vw);
 }
 
+.containerHakimi{
+  padding-left: max(1.2rem, 40/1440 * 100vw);
+  padding-right: max(1.2rem, 40/1440 * 100vw);
+  height: 700px;
+  width: 100%;
+}
+
+
 article {
   padding-top: 15vh;
 }
@@ -64,6 +72,17 @@ header {
 }
 .headerLayout {
   position: relative;
+
+}
+
+.headerLayout h2{
+  font-size: max(3.75rem, 107/1440 * 100vw);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  margin: 0;
+  margin-left:5em;
+  margin-top:1em;
 }
 
 h2 {
@@ -88,6 +107,118 @@ h2 span {
   width: 80%;
   margin-left: 0;
 }
+
+.videoBallEffect{
+  opacity: 1;
+  touch-action: none;
+  animation: fade-in 2s ease 0s forwards;
+  z-index: 5;
+  display: flex;
+  position: relative;
+  align-items: center;
+ height: 500px;
+ top: 50%; /* 将视频球置于容器的上中位置 */
+ transform: translateY(-50%); /* 垂直居中 */
+}
+.blankContainer
+{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 1502px; /* 修改视频容器的高度为692px */
+  overflow: hidden;
+  background-color: black;
+  border-radius: 30px;
+  margin-top: 20em;
+}
+
+
+
+.love{
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  max-width: 100%;
+  height: 20px; /* 修改视频容器的高度为692px */
+  overflow: hidden;
+  /* background-color: black; */
+  /* border-radius: 20px; */
+  background-color:black;
+  align-items: center;
+  padding-left: max(5.2rem, 640/1440 * 100vw);
+  padding-right: max(5.2rem, 640/1440 * 100vw);
+  color: #555;
+}
+
+
+
+.Marquee {
+  white-space: nowrap;
+  padding: 0vw 0;
+  overflow: hidden;
+}
+.Marquee > div {
+  will-change: transform;
+}
+.Marquee h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 30vw;
+}
+
+.marqueeWrapper {
+  overflow: hidden;
+  background:none;
+  color: white;
+  border-radius: 20;
+  margin: -13em 0 0;
+}
+
+.marqueeBig{
+  background-color: #100d14;
+}
+/* https://ryanmulligan.dev/blog/css-marquee/ */
+.marquee {
+  display: flex;
+  user-select: none;
+  gap: var(--gap);
+}
+
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  /* css marquee */
+  will-change: transform;
+  animation: scroll var(--duration) linear infinite;
+}
+.marquee.reverse .marquee__content {
+  animation-direction: reverse;
+  /* background-color:#ff4d4d; */
+  color: #100d14;
+  margin: 8.2em 0 0;
+}
+
+/* .marquee__content:nth-child(1) {
+  color: green;
+}
+.marquee__content:nth-child(2) {
+  color: red;
+} */
+
+.marquee__content h2 {
+  font-size: 8.2vw;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
 @media screen and (min-width: 64em) {
   .subline {
     position: absolute;
@@ -145,7 +276,7 @@ footer {
 
   text-align: center;
   letter-spacing: -0.02em;
-  color: #6e6bcd;
+  color: #ff4d4d;
   border-radius: 100%;
   background: transparent;
   cursor: pointer;
@@ -176,6 +307,37 @@ h3 em span {
   margin-left: auto;
 }
 
+
+.worldSpaceClickableButton{
+  position: relative;
+  display: inline-block;
+  padding: 13px 15px;
+  margin: 1px 0;
+  color: black;
+  font-size: smaller;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  overflow: hidden;
+  margin-right: 10px;
+  text-wrap: nowrap;
+  background-color: white;
+  border-radius: 20px;
+  animation: GlowAnimation 1s infinite;
+ 
+}
+.worldSpaceClickableButton:hover{
+  background: #03e9f4;
+  color: #050801;
+  animation: none;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
 @media screen and (min-width: 35em) {
   h3 em {
     margin-top: 0;
@@ -200,13 +362,17 @@ p {
 }
 
 .JellyPlaceholder {
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/16;
   width: 66%;
   margin: auto;
 }
 
 .ImageLandscape {
   aspect-ratio: 16/9;
+}
+.landingImage{
+  aspect-ratio: 16/9;
+  display: inline;
 }
 .ImagePortrait {
   aspect-ratio: 10/16;
@@ -278,17 +444,6 @@ a:focus-visible {
 .frame > * {
   margin: 1rem 0;
 }
-@media screen and (min-width: 45em) {
-  .frame {
-    width: 100%;
-    height: 5vh;
-    display: grid;
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 
 .frame a,
 .frame button {
@@ -302,21 +457,6 @@ a:focus-visible {
   display: inline;
 }
 
-.frame a:not(.frame__title-back)::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background: currentColor;
-  position: absolute;
-  top: 90%;
-  transition: transform 0.3s;
-  transform-origin: 0% 50%;
-}
-
-.frame a:not(.frame__title-back):hover::before {
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-}
 
 .frame__title {
   grid-area: title;
@@ -343,8 +483,78 @@ a:focus-visible {
   fill: currentColor;
 }
 
-.frame__prev {
+.topnav {
   grid-area: prev;
+  
+}
+
+.topnav a
+{
+  padding: 0px 6px;
+  float: left;
+}
+.dropdown {
+  position: relative;
+
+}
+
+.dropbtn {
+  position: relative;
+  border-radius: 48px;
+  font-size: 20px;
+  color: var(--color-link);;
+  background-color: #ff4d4d;
+  color: #ededed;
+  z-index: 1;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  border: transparent;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.dropbtn:hover {
+  text-decoration: none;
+  background: #cfcfcf;
+  color: #ff4d4d;
+}
+
+.menu > li {
+  margin: 0;
+  border-radius: 48px;
+  transition: 0.3s;
+  background-color: white;
+  list-style: none;
+}
+
+.menu > li:hover {
+  background-color: lightgray;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.imgWrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  min-height: 100px;
+  overflow: hidden;
+  z-index: -5;
+  
 }
 
 .marqueeWrapper {
@@ -399,3 +609,14 @@ a:focus-visible {
 }
 
 
+@media screen and (min-width: 45em) {
+  .frame {
+    width: 100%;
+    height: 5vh;
+    display: grid;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
