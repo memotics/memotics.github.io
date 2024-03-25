@@ -46,10 +46,10 @@ body,
 }
 
 .containerHakimi{
-  padding-left: max(1.2rem, 40/1440 * 100vw);
-  padding-right: max(1.2rem, 40/1440 * 100vw);
-  height: 700px;
+  position: relative; /* 添加相对定位 */
+  height: 1080px;
   width: 100%;
+  margin-top: 8em;
 }
 
 
@@ -72,7 +72,7 @@ header {
 }
 .headerLayout {
   position: relative;
-  height: 1080px;
+
 }
 
 .headerLayout h2{
@@ -93,6 +93,58 @@ h2 {
   margin: 0;
   margin-left: -0.07em;
 }
+
+.phyText{
+  position: absolute;
+  font-size: max(3.75rem, 107/1440 * 100vw);
+  font-weight: 130;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  margin: 0;
+  margin-right: 8em;
+  margin-top: 1em;
+  z-index: 12;
+  margin-left: 2em;
+  /* display: inline-block; */
+}
+
+.imagecubetext{
+  font-size: max(3.75rem, 107/1440 * 100vw);
+  font-weight: 500;
+  line-height:  0.8;
+  letter-spacing: -0.03em;
+  margin: 0;
+  margin-left: 2.5em;
+  white-space: nowrap; /* 禁止换行 */
+  margin-top: -0.8em;
+  margin-bottom: 1.2em;
+}
+
+.headapp{
+  position:absolute ;
+  
+  z-index: 1;
+  margin: -4em 0 0;
+  /* background-color: black; */
+}
+
+
+.Stream{
+  font-size: max(3.75rem, 77/1440 * 100vw);
+  font-weight: 500;
+  line-height:  0.8;
+  letter-spacing: -0.03em;
+  margin: 0;
+  margin-left: 1.2em;
+  white-space: nowrap; /* 禁止换行 */
+}
+
+.lastText{
+  margin-left: 10em;
+  font-size: max(3.75rem, 50/1440 * 100vw);
+  margin-bottom: 5em;
+}
+
 h2 span {
   display: inline-block;
   width: auto;
@@ -116,7 +168,7 @@ h2 span {
   display: flex;
   position: relative;
   align-items: center;
- height: 500px;
+ height: 700px;
  top: 50%; /* 将视频球置于容器的上中位置 */
  transform: translateY(-50%); /* 垂直居中 */
 }
@@ -125,10 +177,16 @@ h2 span {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: 1502px; /* 修改视频容器的高度为692px */
+  height: 1302px; /* 修改视频容器的高度为692px */
   overflow: hidden;
   background-color: black;
   border-radius: 30px;
+  margin-top: 32em;
+}
+
+.blackBackground{
+  background-color: black;
+z-index: -5;
 }
 
 
@@ -146,6 +204,7 @@ h2 span {
   padding-left: max(5.2rem, 640/1440 * 100vw);
   padding-right: max(5.2rem, 640/1440 * 100vw);
   color: #555;
+  margin-top: 25em;
 }
 
 
@@ -170,6 +229,24 @@ h2 span {
   color: white;
   border-radius: 20;
   margin: -13em 0 0;
+  
+}
+
+.marqueeWrapper2{
+  overflow: hidden;
+  background:none;
+  color: white;
+  border-radius: 20;
+  margin: -15em 0 0;
+  background: #ff4d4d;
+}
+
+.marqueeWrapper3{
+  overflow: hidden;
+  background:none;
+  color: white;
+  border-radius: 20;
+  margin: -5em 0 0;
 }
 
 .marqueeBig{
@@ -193,6 +270,31 @@ h2 span {
   will-change: transform;
   animation: scroll var(--duration) linear infinite;
 }
+
+.marquee__content2 {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  /* css marquee */
+  will-change: transform;
+  animation: scroll var(--duration) linear infinite;
+  animation-direction: reverse;
+  /* background-color:#ff4d4d; */
+  color: #ffffff;
+  margin: 0.2em 0 0;
+  
+}
+.marquee__content2 h2 {
+  font-size: 8.2vw;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .marquee.reverse .marquee__content {
   animation-direction: reverse;
   /* background-color:#ff4d4d; */
@@ -215,7 +317,14 @@ h2 span {
   font-weight: 700;
   text-transform: uppercase;
 }
-
+@keyframes scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(calc(-150% - var(--gap)));
+  }
+}
 
 @media screen and (min-width: 64em) {
   .subline {
@@ -229,61 +338,55 @@ h2 span {
   }
 }
 
-footer {
-  padding-top: max(2.5rem, 20vw);
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #100d14;
+  color: white;
+  padding: 20px;
+  padding-top: max(2.5rem, 30vw);
+  border-radius: 30px;
+  padding-left: max(1.2rem, 40/1440 * 100vw);
+  padding-right: max(1.2rem, 40/1440 * 100vw);
 }
 
-.EffectsToggle {
-  position: sticky;
-  top: -1px; /* use to detect if pinned */
-  left: max(1.2rem, 40/1440 * 100vw);
-  z-index: 1000;
-  height: 20vh;
-  font-size: 1.5rem;
-  display: inline-block;
-  font-family: "Playfair Display";
-  font-style: italic;
-  letter-spacing: -0.03rem;
+.footer-left {
+  flex: 1;
 }
-.EffectsToggle__Inner {
+
+.footer-right {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: auto;
-  padding: 0.5rem 1.2rem;
-  margin-left: -1.2rem;
-  margin-top: 1rem;
-  border-radius: 2.5rem;
-  transition: background 0.2s ease;
-}
-.EffectsToggle.is-pinned .EffectsToggle__Inner {
-  background: #dbe1f6;
 }
 
-.EffectsToggle__Text {
-  display: block;
-  width: 10em;
+.social-icons {
+  display: flex;
 }
-.EffectsToggle button {
-  appearance: none;
-  border: 1px solid #6e6bcd;
-  font-weight: 600;
-  font-family: "Poppins";
-  font-style: normal;
-  font-size: 1.25rem;
 
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #ff4d4d;
-  border-radius: 100%;
-  background: transparent;
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.go-to-top {
   cursor: pointer;
-  width: 4.125rem;
-  height: 2.0625rem;
-  text-align: center;
-  vertical-align: center;
-  padding: 0;
+  background-color: white;
+  color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
+
+.go-to-top:hover {
+  background-color: #eee;
+}
+
 
 h3 {
   font-family: "Playfair Display", sans-serif;
@@ -336,6 +439,23 @@ h3 em span {
    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
+.drag {
+  height: 200px;
+  width: 200px;
+  position: absolute; /* 使用绝对定位 */
+  z-index: 5;
+  left: 50%;
+  bottom: 0; /* 放置在底部 */
+  transform: translateX(-50%); /* 居中水平 */
+}
+
+.drag img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
 @media screen and (min-width: 35em) {
   h3 em {
     margin-top: 0;
@@ -369,7 +489,7 @@ p {
   aspect-ratio: 16/9;
 }
 .landingImage{
-  aspect-ratio: 16/9;
+  aspect-ratio: 12/9;
   display: inline;
 }
 .ImagePortrait {
@@ -442,6 +562,11 @@ a:focus-visible {
 .frame > * {
   margin: 1rem 0;
 }
+.frame.container{
+  margin-top: 1em;
+  position: fixed;
+  z-index: 100;
+}
 
 .frame a,
 .frame button {
@@ -455,21 +580,6 @@ a:focus-visible {
   display: inline;
 }
 
-.frame a:not(.frame__title-back)::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background: currentColor;
-  position: absolute;
-  top: 90%;
-  transition: transform 0.3s;
-  transform-origin: 0% 50%;
-}
-
-.frame a:not(.frame__title-back):hover::before {
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-}
 
 .frame__title {
   grid-area: title;
@@ -478,7 +588,7 @@ a:focus-visible {
 
 .frame__title-main {
   font-size: inherit;
-  margin: 0;
+  margin: 2.3em 1em 0;
   font-weight: inherit;
 }
 
@@ -496,9 +606,13 @@ a:focus-visible {
   fill: currentColor;
 }
 
+.frame__title-logo {
+  width: 10%;
+  height: 10%;
+  border-radius: 5px;
+  margin-top: 1em;}
 .topnav {
   grid-area: prev;
-  
 }
 
 .topnav a
@@ -506,8 +620,12 @@ a:focus-visible {
   padding: 0px 6px;
   float: left;
 }
+.dropdown {
+  position: relative;
+  margin-top: 2em;
+}
 
-.drop_btn {
+.dropbtn {
   position: relative;
   border-radius: 48px;
   font-size: 20px;
@@ -521,17 +639,24 @@ a:focus-visible {
   font-size: 15px;
   transition: 0.3s;
 }
-.drop_btn:hover {
+.dropbtn:hover {
   text-decoration: none;
   background: #cfcfcf;
   color: #ff4d4d;
 }
-
+.menu{
+  position:fixed;
+  z-index: 5;
+  right: 40px;
+}
 .menu > li {
-  margin: 0;
+  margin: 2px;
   border-radius: 48px;
   transition: 0.3s;
   background-color: white;
+  list-style: none;
+  width: 120px;
+  
 }
 
 .menu > li:hover {
@@ -541,7 +666,7 @@ a:focus-visible {
 .menu > li > button {
   width: 100%;
   height: 100%;
-  text-align: left;
+  text-align: center;
 
   background: none;
   color: inherit;
