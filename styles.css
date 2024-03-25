@@ -1,0 +1,769 @@
+/**
+ * This is not a CSS tutorial, be gentle... 😇
+ */
+
+@import url("/fonts.css");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-display: block;
+    overscroll-behavior: contain;
+    font-size: max(0.75rem, 0.8101851852vw);
+    color: #ff4d4d;
+    background: #ecedef;
+}
+
+::selection {
+    background: rgba(110, 107, 205, 0.5);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: max(1.2rem, 40/1440 * 100vw);
+    padding-right: max(1.2rem, 40/1440 * 100vw);
+}
+
+.containerHakimi {
+    position: relative; /* 添加相对定位 */
+    height: 1080px;
+    width: 100%;
+    margin-top: 8em;
+}
+
+
+article {
+    padding-top: 15vh;
+}
+
+section {
+    margin: max(5px, 5vw) 0;
+}
+
+header {
+    height: 40vh;
+    max-height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    margin-bottom: max(2.5rem, 5vw);
+}
+
+.headerLayout {
+    position: relative;
+}
+
+    .headerLayout h2 {
+        font-size: max(3.75rem, 107/1440 * 100vw);
+        font-weight: 500;
+        line-height: 0.8;
+        letter-spacing: -0.03em;
+        margin: 0;
+        margin-left: 5em;
+        margin-top: 1em;
+    }
+
+h2 {
+    font-size: max(3.75rem, 187/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: -0.07em;
+}
+
+.phyText {
+    /* position: absolute; */
+    font-size: max(3.75rem, 107/1440 * 100vw);
+    font-weight: 130;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-right: 5.4em;
+    margin-top: 1em;
+    z-index: 1;
+    margin-left: 2em;
+    /* display: inline-block; */
+}
+
+.imagecubetext {
+    font-size: max(3.75rem, 107/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: 2.5em;
+    white-space: nowrap; /* 禁止换行 */
+    margin-top: -0.8em;
+    margin-bottom: 1.2em;
+}
+
+.headapp {
+    position: absolute;
+    z-index: 1;
+    margin: -4em 0 0;
+    /* background-color: black; */
+}
+
+
+.Stream {
+    font-size: max(3.75rem, 77/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: 1.2em;
+    white-space: nowrap; /* 禁止换行 */
+}
+
+.lastText {
+    margin-left: 10em;
+    font-size: max(3.75rem, 50/1440 * 100vw);
+    margin-bottom: 5em;
+}
+
+h2 span {
+    display: inline-block;
+    width: auto;
+}
+
+.subline {
+    font-weight: 400;
+    font-size: max(14px, calc(14 / 1440 * 100vw));
+    display: block;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-top: 2.5rem;
+    width: 80%;
+    margin-left: 0;
+}
+
+.videoBallEffect {
+    opacity: 1;
+    touch-action: none;
+    animation: fade-in 2s ease 0s forwards;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 700px;
+    top: 50%; /* 将视频球置于容器的上中位置 */
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+.blankContainer {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 1302px; /* 修改视频容器的高度为692px */
+    overflow: hidden;
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 32em;
+}
+
+.blackBackground {
+    background-color: black;
+    z-index: -5;
+}
+
+
+.love {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
+    height: 20px; /* 修改视频容器的高度为692px */
+    overflow: hidden;
+    /* background-color: black; */
+    /* border-radius: 20px; */
+    background-color: black;
+    align-items: center;
+    padding-left: max(5.2rem, 640/1440 * 100vw);
+    padding-right: max(5.2rem, 640/1440 * 100vw);
+    color: #555;
+    margin-top: 25em;
+}
+
+
+
+.Marquee {
+    white-space: nowrap;
+    padding: 0vw 0;
+    overflow: hidden;
+}
+
+    .Marquee > div {
+        will-change: transform;
+    }
+
+    .Marquee h1 {
+        margin: 0;
+        line-height: 1;
+        font-size: 30vw;
+    }
+
+.marqueeWrapper {
+    overflow: hidden;
+    background: none;
+    color: white;
+    border-radius: 20;
+    margin: -13em 0 0;
+}
+
+.marqueeWrapper2 {
+    overflow: hidden;
+    background: none;
+    color: white;
+    border-radius: 20;
+    margin: -15em 0 0;
+    background: #ff4d4d;
+}
+
+.marqueeWrapper3 {
+    overflow: hidden;
+    background: none;
+    color: white;
+    border-radius: 20;
+    margin: -5em 0 0;
+}
+
+.marqueeBig {
+    background-color: #100d14;
+}
+/* https://ryanmulligan.dev/blog/css-marquee/ */
+.marquee {
+    display: flex;
+    user-select: none;
+    gap: var(--gap);
+}
+
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    /* css marquee */
+    will-change: transform;
+    animation: scroll var(--duration) linear infinite;
+}
+
+.marquee__content2 {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    /* css marquee */
+    will-change: transform;
+    animation: scroll var(--duration) linear infinite;
+    animation-direction: reverse;
+    /* background-color:#ff4d4d; */
+    color: #ffffff;
+    margin: 0.2em 0 0;
+}
+
+    .marquee__content2 h2 {
+        font-size: 8.2vw;
+        margin: 0;
+        line-height: 1.5;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+.marquee.reverse .marquee__content {
+    animation-direction: reverse;
+    /* background-color:#ff4d4d; */
+    color: #100d14;
+    margin: 8.2em 0 0;
+}
+
+/* .marquee__content:nth-child(1) {
+  color: green;
+}
+.marquee__content:nth-child(2) {
+  color: red;
+} */
+
+.marquee__content h2 {
+    font-size: 8.2vw;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(calc(-150% - var(--gap)));
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .subline {
+        position: absolute;
+        left: 50%;
+        bottom: 1.5%;
+        width: max(300px, 22vw);
+        height: auto;
+        top: auto;
+        display: block;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #100d14;
+    color: white;
+    padding: 20px;
+    padding-top: max(2.5rem, 30vw);
+    border-radius: 30px;
+    padding-left: max(1.2rem, 40/1440 * 100vw);
+    padding-right: max(1.2rem, 40/1440 * 100vw);
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+}
+
+    .social-icons a {
+        color: white;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+.go-to-top {
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+    .go-to-top:hover {
+        background-color: #eee;
+    }
+
+
+h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    font-size: max(2rem, 64/1440 * 100vw);
+    margin: 10vw 0;
+}
+
+    h3 span {
+        width: 80%;
+    }
+
+    h3 em {
+        text-align: right;
+        display: block;
+        margin-top: 2.5rem;
+    }
+
+        h3 em span {
+            margin-left: auto;
+        }
+
+
+.worldSpaceClickableButton {
+    position: relative;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 1px 0;
+    color: black;
+    font-size: smaller;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    overflow: hidden;
+    margin-right: 10px;
+    text-wrap: nowrap;
+    background-color: white;
+    border-radius: 20px;
+    animation: GlowAnimation 1s infinite;
+}
+
+    .worldSpaceClickableButton:hover {
+        background: #03e9f4;
+        color: #050801;
+        animation: none;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+
+.drag {
+    height: 200px;
+    width: 200px;
+    position: absolute; /* 使用绝对定位 */
+    z-index: 5;
+    left: 50%;
+    bottom: 0; /* 放置在底部 */
+    transform: translateX(-50%); /* 居中水平 */
+}
+
+    .drag img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+@media screen and (min-width: 35em) {
+    h3 em {
+        margin-top: 0;
+    }
+}
+
+h4 {
+    font-weight: 400;
+    font-size: max(1rem, 36/1440 * 100vw);
+    line-height: 1.36;
+    margin: max(5rem, 200/1440 * 100vw) 0;
+    width: 77%;
+}
+
+p {
+    margin-top: max(5rem, 5vw);
+}
+
+@media (min-width: 400px) {
+    p {
+        margin-left: 50%;
+        width: max(200px, 22vw);
+    }
+}
+
+.JellyPlaceholder {
+    aspect-ratio: 16/16;
+    width: 66%;
+    margin: auto;
+}
+
+.ImageLandscape {
+    aspect-ratio: 16/9;
+}
+
+.landingImage {
+    aspect-ratio: 12/9;
+    display: inline;
+}
+
+.ImagePortrait {
+    aspect-ratio: 10/16;
+    width: 47.5%;
+}
+
+.ParallaxContainer {
+    display: flex;
+    margin: max(5rem, 300/1440 * 100vw) 0;
+}
+
+.aspect-16_11 {
+    aspect-ratio: 16/11;
+    width: 50%;
+}
+
+.aspect-9_13 {
+    aspect-ratio: 9/13;
+    width: 18%;
+    margin: auto;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* CODROPS TEMPLATE */
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+    cursor: pointer;
+}
+
+    a:hover {
+        color: var(--color-link-hover);
+        outline: none;
+    }
+
+    /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+    a:focus {
+        /* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+        outline: none;
+        background: lightgrey;
+    }
+
+        a:focus:not(:focus-visible) {
+            /* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+            background: transparent;
+        }
+
+    a:focus-visible {
+        /* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+        outline: 2px solid #6e6bcd;
+        background: transparent;
+    }
+
+.frame {
+    width: 100%;
+    min-height: 5vh;
+    padding-bottom: 1.5rem;
+}
+
+    .frame > * {
+        margin: 1rem 0;
+    }
+
+    .frame.container {
+        margin-top: 1em;
+        position: fixed;
+        z-index: 100;
+    }
+
+    .frame a,
+    .frame button {
+        pointer-events: auto;
+    }
+
+        .frame a:not(.frame__title-back) {
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            display: inline;
+        }
+
+
+.frame__title {
+    grid-area: title;
+    display: flex;
+}
+
+.frame__title-main {
+    font-size: inherit;
+    margin: 2.3em 1em 0;
+    font-weight: inherit;
+}
+
+.frame__title-back {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+    /* .frame__title-back span {
+  display: none;
+} */
+
+    .frame__title-back svg {
+        fill: currentColor;
+    }
+
+.frame__title-logo {
+    width: 12%;
+    height: 12%;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.topnav {
+    grid-area: prev;
+}
+
+    .topnav a {
+        padding: 0px 6px;
+        float: left;
+    }
+
+.dropdown {
+    position: relative;
+    margin-top: 2em;
+}
+
+.dropbtn {
+    position: relative;
+    border-radius: 48px;
+    font-size: 20px;
+    color: var(--color-link);
+    ;
+    background-color: #ff4d4d;
+    color: #ededed;
+    z-index: 1;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    border: transparent;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+    .dropbtn:hover {
+        text-decoration: none;
+        background: #cfcfcf;
+        color: #ff4d4d;
+    }
+
+.menu {
+    position: fixed;
+    z-index: 5;
+    right: 40px;
+}
+
+    .menu > li {
+        margin: 2px;
+        border-radius: 48px;
+        transition: 0.3s;
+        background-color: white;
+        list-style: none;
+        width: 120px;
+    }
+
+        .menu > li:hover {
+            background-color: lightgray;
+        }
+
+        .menu > li > button {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 5px;
+            margin: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+
+.imgWrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    min-height: 100px;
+    overflow: hidden;
+    z-index: -5;
+}
+
+.marqueeWrapper {
+    overflow: hidden;
+    background: none;
+    color: white;
+    border-radius: 20;
+    margin: -18em 0 0;
+    /* background-color: black; */
+}
+
+/* https://ryanmulligan.dev/blog/css-marquee/ */
+.marquee {
+    display: flex;
+    user-select: none;
+    gap: var(--gap);
+    margin: 0 em 0 0;
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    /* css marquee */
+    will-change: transform;
+    animation: scroll var(--duration) linear infinite;
+    margin: 0;
+}
+
+.marquee.reverse .marquee__content {
+    animation-direction: reverse;
+    margin: 0;
+    color: black;
+    margin: 16.2em 0 0;
+}
+
+/* .marquee__content:nth-child(1) {
+  color: green;
+}
+.marquee__content:nth-child(2) {
+  color: red;
+} */
+
+.marquee__content h2 {
+    font-size: 8vw;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+@media screen and (min-width: 45em) {
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: grid;
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
