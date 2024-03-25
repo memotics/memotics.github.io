@@ -181,18 +181,13 @@ h2 span {
   overflow: hidden;
   background-color: black;
   border-radius: 30px;
-<<<<<<< HEAD
   margin-top: 32em;
 }
 
 .blackBackground{
   background-color: black;
 z-index: -5;
-=======
-  margin-top: 20em;
->>>>>>> 9361aeea7d8d76a165a19fda5d490b38c5b905b2
 }
-
 
 
 .love{
@@ -276,7 +271,6 @@ z-index: -5;
   animation: scroll var(--duration) linear infinite;
 }
 
-<<<<<<< HEAD
 .marquee__content2 {
   flex-shrink: 0;
   display: flex;
@@ -300,9 +294,6 @@ z-index: -5;
   font-weight: 700;
   text-transform: uppercase;
 }
-=======
-
->>>>>>> 9361aeea7d8d76a165a19fda5d490b38c5b905b2
 
 .marquee.reverse .marquee__content {
   animation-direction: reverse;
@@ -631,15 +622,9 @@ a:focus-visible {
 }
 .dropdown {
   position: relative;
-<<<<<<< HEAD
   margin-top: 2em;
 }
 
-=======
-
-}
-
->>>>>>> 9361aeea7d8d76a165a19fda5d490b38c5b905b2
 .dropbtn {
   position: relative;
   border-radius: 48px;
