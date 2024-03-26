@@ -763,6 +763,40 @@ a {
     text-transform: uppercase;
 }
 
+#VideoClose {
+    position: absolute; /* Ensures close button stays within the panel */
+    top: 5px; /* Adjust for desired gap from top */
+    right: 100px; /* Adjust for desired gap from right */
+    background: white; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 2rem; /* Adjust font size for close button */
+    cursor: pointer; /* Indicate clickable behavior */
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+  
+  .VideoHolder {
+    position: fixed;
+    left: 3vw;
+    top: 5vh;
+    right: 1vw;
+    bottom: 5vh;
+    background-color: none;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    /* Added overflow: hidden to prevent potential iframe overflow */
+    overflow: hidden;
+  }
+  
+  #ytVideo {
+    width: 100%; /* Ensures iframe fills the remaining space */
+    height: 100%; /* Ensures iframe fills the remaining space */ /* Adjust for desired gap (margin alternative below) */
+    padding: 20px 10%;
+  }
+  
+
 
 @media screen and (min-width: 45em) {
     .frame {
