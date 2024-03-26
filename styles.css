@@ -44,6 +44,14 @@ body,
     padding-right: max(1.2rem, 40/1440 * 100vw);
 }
 
+.headAppContainer{
+    padding-left: max(1.2rem, 40/1440 * 100vw);
+    padding-right: max(1.2rem, 40/1440 * 100vw); 
+    display: flex;
+    justify-content: center;
+    padding: 150px;
+}
+
 .containerHakimi {
     position: relative; /* 添加相对定位 */
     height: 1080px;
