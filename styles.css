@@ -54,7 +54,7 @@ body,
 
 .containerHakimi {
     position: relative; /* 添加相对定位 */
-    height: 1080px;
+    height: 100vh;
     width: 100%;
     margin-top: 8em;
 }
@@ -80,6 +80,7 @@ header {
 
 .headerLayout {
     position: relative;
+    margin-top: -50em;
 }
 
     .headerLayout h2 {
@@ -310,13 +311,6 @@ h2 span {
     margin: 8.2em 0 0;
 }
 
-/* .marquee__content:nth-child(1) {
-  color: green;
-}
-.marquee__content:nth-child(2) {
-  color: red;
-} */
-
 .marquee__content h2 {
     font-size: 8.2vw;
     margin: 0;
@@ -333,18 +327,6 @@ h2 span {
 
     to {
         transform: translateX(calc(-150% - var(--gap)));
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .subline {
-        position: absolute;
-        left: 50%;
-        bottom: 1.5%;
-        width: max(300px, 22vw);
-        height: auto;
-        top: auto;
-        display: block;
     }
 }
 
@@ -466,12 +448,6 @@ h3 {
 
 
 
-@media screen and (min-width: 35em) {
-    h3 em {
-        margin-top: 0;
-    }
-}
-
 h4 {
     font-weight: 400;
     font-size: max(1rem, 36/1440 * 100vw);
@@ -484,12 +460,6 @@ p {
     margin-top: max(5rem, 5vw);
 }
 
-@media (min-width: 400px) {
-    p {
-        margin-left: 50%;
-        width: max(200px, 22vw);
-    }
-}
 
 .JellyPlaceholder {
     aspect-ratio: 16/16;
@@ -504,6 +474,7 @@ p {
 .landingImage {
     aspect-ratio: 12/9;
     display: inline;
+    border-radius: 30;
 }
 
 .ImagePortrait {
@@ -616,9 +587,6 @@ a {
     align-items: flex-end;
 }
 
-    /* .frame__title-back span {
-  display: none;
-} */
 
     .frame__title-back svg {
         fill: currentColor;
@@ -798,14 +766,217 @@ a {
   
 
 
-@media screen and (min-width: 45em) {
+
+@media screen and (min-width: 35em) {
+    h3 em {
+        margin-top: 0;
+    }
+}
+
+
+
+@media (min-width: 400px) {
+    p {
+        margin-left: 50%;
+        width: max(200px, 22vw);
+    }
+    
+}
+/* 对于小屏幕（手机等），设置基本样式 */
+@media screen and (max-width: 27em) {
+    /* 这里是针对小屏幕的 CSS 样式 */
     .frame {
         width: 100%;
         height: 5vh;
-        display: grid;
-        padding-top: 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 1.5rem; /* 将此行调整至 display: flex; 下 */
     }
+    .headerLayout{
+        margin-top: -19em;
+    }
+    .dropbtn {
+        margin-right: 15em;
+    }
+    .menu {
+        right: 2em;
+    }
+    .headerLayout h2 {
+        font-size: max(2.5rem, 37/1440 * 70vw);
+        margin-top: 4em;
+    }
+    .blankContainer{
+        margin-top: -13.2em;
+        height: 500px;
+    }
+    .videoBallEffect{
+        height: 250px;
+        top: 50%;
+    }
+    .love{
+        margin-top: 12em;
+        padding:0;
+        text-align: center;
+    }
+    .marqueeWrapper{
+        margin: -13em 0 0;
+    }
+    .marquee.reverse .marquee__content{
+        margin: 12.6em 0 0;
+    }
+    .headAppContainer{
+        padding-left: 0;
+        padding-right: 0; 
+        justify-content: center;
+        /* padding: 50px; */
+        margin-top: -10em;
+        
+    }
+    .marqueeWrapper2{
+        margin: -10em 0 0;
+    }
+    .containerHakimi{
+        height: 80vh;
+        margin-top: 5em;
+    }
+}
+  
+/* 对于小屏幕（手机等），设置基本样式 */
+@media screen and (min-width: 27.0625em) and (max-width: 48em) {
+    /* 这里是针对小屏幕的 CSS 样式 */
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem; /* 将此行调整至 display: flex; 下 */
+    }
+    .headerLayout{
+        margin-top: -22em;
+    }
+    .dropbtn {
+        margin-right: 3em;
+    }
+    .menu {
+        right: 2em;
+    }
+    .blankContainer{
+        margin-top: -9.5em;
+        height: 1200px;
+    }
+   
+      
+    .marqueeWrapper{
+        margin: -15.5em 0 0;
+    }
+    .marquee.reverse .marquee__content{
+        margin: 14.6em 0 0;
+    }
+    .headAppContainer{
+        padding-left: 0;
+        padding-right: 0; 
+        justify-content: center;
+        margin-top: -10em;
+        
+    }
+    .marqueeWrapper2{
+        margin: -15em 0 0;
+    }
+   
+}
+  
+/* 对于中等屏幕（平板等），设置适当的样式 */
+@media screen and (min-width: 48.0625em) and (max-width: 64em) {
+    /* 这里是针对中等屏幕的 CSS 样式 */
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem; /* 将此行调整至 display: flex; 下 */
+    }
+    .headerLayout{
+        margin-top: -25em;
+    }
+    .menu {
+        right: 2em;
+    }
+    .blankContainer{
+        margin-top: -18em;
+        height: 1200px;
+    }
+   
+      
+    .marqueeWrapper{
+        margin: -23.5em 0 0;
+    }
+    .marquee.reverse .marquee__content{
+        margin: 22.6em 0 0;
+    }
+    .headAppContainer{
+        padding-left: 0;
+        padding-right: 0; 
+        justify-content: center;
+        margin-top: -10em;
+        
+    }
+    .marqueeWrapper2{
+        margin: -20em 0 0;
+    }
+}
+  
+/* 对于大屏幕（桌面电脑等），设置适当的样式 */
+@media screen and (min-width: 64em) {
+    .subline {
+        position: absolute;
+        left: 50%;
+        bottom: 1.5%;
+        width: max(300px, 22vw);
+        height: auto;
+        top: auto;
+        display: block;
+    }
+
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem; /* 将此行调整至 display: flex; 下 */
+    }
+    .menu {
+        right: 3em;
+    }
+    
+}
+
+  
+
+@media screen and (min-width: 64em) {
+    .subline {
+        position: absolute;
+        left: 50%;
+        bottom: 1.5%;
+        width: max(300px, 22vw);
+        height: auto;
+        top: auto;
+        display: block;
+    }
+
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem; /* 将此行调整至 display: flex; 下 */
+    }
+    .menu {
+        right: 3em;
+    }
+    
 }
